@@ -28,3 +28,15 @@
    - 커스텀 폰트 적용
      - .ttf 파일을 res/font폴더에 넣고 fontFamily=@font/이름 적용
    
+4. 계산기
+   - TableLayout
+     - 격자 형태로 뷰를 배치할 수 있는 레이아웃
+     - TableRow
+   - drawable
+     - ripple 태그
+   - LayoutInflater
+   - Room DB 
+   - Thread
+   - data class
+   - SpannableStringBuilder
+     - 문자열 중간의 특성을 바꿀 수 있음 
