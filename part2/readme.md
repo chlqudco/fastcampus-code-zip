@@ -35,8 +35,18 @@
    - drawable
      - ripple 태그
    - LayoutInflater
+     - 레이아웃을 동적으로 생성해서 붙이는 느낌
+     - 내가 아는건 리사이클러뷰 인데 리사이클러 뷰를 안쓰고도 비슷한 구현  
+     - LayoutInflater.from(context).inflate(xml파일, null, false) 으로 생성 후 view 에 addView 하면 끝
    - Room DB 
+     - @Entity와 @PrimaryKey 등의 어노테이션으로 간단히 테이블 구현
+     - @Dao 와 @Query등을 통해 테이블 접근 
+     - @Database를 통해 진짜 DB 클래스 생성
    - Thread
    - data class
+     - Model 클래스에 자주 쓰는 클래스 형태
    - SpannableStringBuilder
      - 문자열 중간의 특성을 바꿀 수 있음 
+   - 확장 함수
+     - 기존 클래스에 메소드를 추가
+     - ex) fun String.isNumber(): Boolean{} 
