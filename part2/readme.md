@@ -50,3 +50,34 @@
    - 확장 함수
      - 기존 클래스에 메소드를 추가
      - ex) fun String.isNumber(): Boolean{} 
+
+5. 전자 액자
+   - Permission
+     - 민감한? 정보나 기능을 다룰 때는 사용자의 권한을 받아와야 함 
+     - 거절한 유저를 위해 교육용 뷰를 보여줘야 함
+     - ContextCompat.checkSelfPermission(context, 권한)==PackageManager.PERMISSION_GRANTED으로 권한 있는지 체크
+     - shouldShowRequestPermissionRational 함수로 교육용 팝업 띄워야 하는지 확인
+     - 실제 권한 요청 : requestPermissions(권한 배열, 요청코드)
+     - onRequestPermissionResult 함수를 오버라이드 하여 결과 처리
+   - View Animation
+     - 뷰.animate().속성().setDuration(초).start()
+   - Content Provider
+     - 이 앱에선 SAF를 이용 
+     - intent.ACTIOC_GET_CONTENT 
+   - LifeCycle 
+     - 액티비티의 생명주기를 잘 알고 있어야 함
+   - Timer
+     - 일정 시간 마다 람다식 안의 내용 실행   
+
+
+6. 뽀모도로 타이머
+   - CountDownTimer
+     - 말그대로 타이머, 초기값과 2개 메소드 오버라이드 해야함 
+   - SoundPool
+     - 오디오파일 재생 및 관리 클래스
+     - 짧은 파일에 적합
+   - SeekBar
+     - 손잡이로 조절하는 바 ?
+     - setOnSeekBarChangeListener로 리스너를 달 수 있고, 3개의 메소드 오버라이드 해야함
+
+
