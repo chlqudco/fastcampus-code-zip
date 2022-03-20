@@ -15,13 +15,24 @@
     - 퍼미션은 외부 의존성 추가하는 방법도 있음
   - 마커를 찍기 위해 Marker 객체를 생성하고 원하는 파라미터를 지정해주기
 
+
 - ViewPager2
-
-
+  - Viewpager 의 업그레이드 버전
+  - Recycler View 기반으로 만들어짐, fragment 전환 효과
+  - 페이지 전환마다 이벤트를 등록하려면 registerOnPagerChangeCallback 등록후 메소드 오버라이드 하기
 
 - Coordinator Layout
   - Frame 레이아웃의 진화버젼
-
+  - 인터렉션이 중요한 레이아웃을 쓸 때 사용  
 
 
 - Bottom Sheet Behavior 
+  - 하단에 숨어있다가 올라오는 느낌의 레이아웃
+  - 따로 layout파일을 하나 만들어서 만들 수 있음
+    - 만든 뒤 include 속성 이용
+    - layout_behavior 속성과 peekheight 값을 줘야함   
+
+- 외부 공유 기능
+  - intent의 chooser 기능 사용
+  - intent의 ACTION_SEND 속성 지정
+  - 글을 붙이려면 Intent.EXTRA_TEXT 붙이기 
