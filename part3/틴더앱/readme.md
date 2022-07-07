@@ -25,3 +25,50 @@
   - 깃허브 검색창에 원하는 기능을 검색 
   - readme에 사용법이 있으면 그대로 따라하기 
   - Issue나 다른 카테고리에 질의응답이나 정보가 있음
+
+---
+-Firebase Auth
+	-계정 생성 기능
+	-1. 의존성 추가
+		-tmplementation 'com.google.firebase:firebase-auth-ktx'
+	-2. 여러 방법으로 로그인이 가능함	
+
+	-로그인은 보통 별도의 액티비티에서 실행
+
+	-접근 방법 : var auth = Firebase.auth
+
+	-회원 가입 방법
+		-auth.createUserWithEmailAndPasseord(이메일, 비번)..addOnCompleteListener(this){ task ->
+			if(task.isSuccessful){
+				회원 가입 성공 메세지 출력 
+			}else{
+				오류 메시지 출력
+			}
+	
+	-로그인 방법
+		-auth.sigbInWithEnmailAndPassword(이메일, 비번).addOnCompleteListener(this){ task ->
+			if(task.isSuccessful){
+				메인 화면으로 진입
+			}else{
+				오류 메시지 출력
+			}
+		}
+
+	-매번 로그인 하기 귀찬흥니까
+		-매인 액티비티에서 auth.currentUser == null 일때만 로그인 액티비티 실행하기
+
+
+-Firebase Realtime DB
+	-실시간 DB연동 가능
+	-설정 가서 json다시 받아서 다시 붙여넣기
+	-의존성 추가
+	- 값을 가져올때는 리스너를 달아야함
+
+-AlertDialog
+	-AlerDialog.Builder(this).setTititle("").setView(뷰를 넣을수도 있음).setPositiveButton("화긴"){_,_->  }.setCancleable(false)<-뒤로가기 못하게.show()
+
+
+
+-CardStackView
+	-깃헙에서 가져온 라이브러리
+
