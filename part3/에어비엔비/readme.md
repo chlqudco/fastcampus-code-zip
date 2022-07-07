@@ -36,3 +36,61 @@
   - intent의 chooser 기능 사용
   - intent의 ACTION_SEND 속성 지정
   - 글을 붙이려면 Intent.EXTRA_TEXT 붙이기 
+  
+---
+- 네이버 지도 API
+	-네이버 map api검색
+	-1. 그래들에 뭐 여러문장 추가
+	-xml에 MapView 추가
+	-매니페스트에 메타데이터 추가
+	-kt 파일에서 생명주기마다 따라서 써줘야함
+	-변수.getMapAsync()로 관리? 가져옴?	
+	-여러 기능들은 문서 보던가 강의 보던가
+
+- 뷰페이저 2
+	-리사이클러 뷰 기반?
+
+
+
+- 프레임 레이아웃
+
+
+
+
+- 코디네이터레이아웃
+	- 프레임 레이아웃에 기능이 추가된 버젼
+	-인터렉션이 중요한? ui를 쓸때 사용하면 좋음??
+	-
+
+
+- 바텀시트비헤이비어? 다이얼로그?
+	-xml에서 <include 
+
+
+
+- 레트로핏
+	-API를 쉽게 이용하기 위함.
+	-json 을 쉽게 쓰기 위해 앵간하면 같이 의존성에 추가
+
+
+
+- 글라이드
+
+
+
+
+- 목 API
+	-서버 인척 하는 거?
+	-작성한 json코드를 마치 서버에서 접근할 수 있게 해줌.
+
+
+
+-공유하기 기능
+	-val intent = Intent().apply{action = Intent.ACTION_SEND
+			putExtra(Intent.EXTRA_TEXT, "공유 하고자 하는 내용")
+			type = "text/plain" <- 타입을 받을 수 있는 애들이 목록?에 나옴}
+		-startActivity(Intent.createChooser(intent,null))
+		
+
+
+  
