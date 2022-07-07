@@ -40,3 +40,86 @@
   - 1. gradle에 id 추가
   - 2. 클래스 위에 @Parcelize , 뒤에 : Parcelable 쓰면 직렬화 가능
   - 가져올땐 getParcelableExtra로 가져오기 
+
+---
+
+-인터파크 OPEN API
+	-책 정보 읽어와!
+
+-리사이클러 뷰
+	-스크롤 뷰는 모든 컨텐츠? 들을 다 그리기 때문에 cost가 매우 높음
+	-리사이클러뷰는 보이는 곳만 그림, 절약 굳
+	-재료
+		-그려질 뷰의 레이아웃
+		-어댑터 클라스
+	-리사이클러뷰에 레이아웃 매니저랑 어댑터 설정하면 끝
+	-xml상에서 모양을 보고 싶으면 tools:listitem = "@layout/xml이름"
+
+-Room DB
+	-1. 의존성 2줄, plugin 추가하기
+	-2. 추상 클래스 만들기 , 클래스 위에 @Database(entities = [클래스 이름::class], version = 1) 추가
+		-클래스는 RoomDataase() 상속
+	-3. 클래스 안에 Dao 상속받는 Dao함수 만들기
+	-4. 데이터 클래스 만들고 위에 @Entity쓰기 
+		-안에 변수들은 @PrimaryKey 나 @ColumnInfo(anme = "sadsd") 로 추가 
+	-5. Dao 인터페이스 만드기, 위에 @Dao쓰기
+		-원하는 쿼리의 함수 작성, 함수 위에 @Query("SELECT * FROM ㅁㄴㅇㅁㄴㅇ") 라던지, @Insert 같은거 추가
+	-6. 메인에서 val DB = Room.databaseBulder(applicationContet, 디비클래스::class.java, "이름").build
+	-7. DB작업은 쓰레드를 열고 해야됨 , Thread{db.Dao인터페이스().원하는함수}.start()
+
+
+-Retrofit 라이브러리
+	-API를 쉽게 사용하게 해줌
+	-깃헙에 올라가있는 오픈소스 라이브라리
+	-검색하면 사이트에 설명이 자세히 나옴
+	-1. 의존성 추가하기
+		-레트로핏 버젼이랑 컨버터-지슨
+	-2. 인터페이스 만들기
+		-@GET("/request주소 말고 그 뒷부분 주소")
+		-fun 함수이름(
+			@Query("key") apiKey: String, 이런 식으로 파라미터 넣기
+		) : Call<데이터 클래스>
+	-2.1 데이터 클래스 만들기
+		-( 안에 내가 쓸 값 변수 선언
+		 @SerializedName("서버에서 주는 이름") val 변수 : String)
+	 
+	-3. 메인액티비티 에서 레트로핏 불러오기
+		-val retrofit = Retrofit.Builder().baseUrl("알아서;").addConverterFactory(GsonCo에이씨.create()).build()
+		-val Service = retrofit.creat(인터페이스::class.java)
+		-Service.함수로 알아서 잘 갖고오기, ㅈㄴ 복잡함
+
+	-인터넷 권한 및 hppts인지 확인
+
+
+-Glide 라이브러리
+	-유알엘의 이미지 쉽게 적용
+	-깃헙 페이지에 자세히 나타나있음
+	-1. 의존성 추가
+	-2. 바로 적용, Glide.with(컨텍스트).load(Url).into(이미지뷰)
+	-http는 fail되므로 매니페스트에 useCleartextTraffic을 true로 주기
+
+
+
+-OPEN API
+	-남의 DB를 내가 쓸 수 있는 기능
+	-요청 URL을 알아야함
+	-필수 요청 변수를 알아야함
+	-postman이란 크롬 확장프로그램으로 테스트 가능
+	
+
+-EditText 검색? 구현
+	-edittext.setOnKeyListener {v, keyCode, event ->
+		if(keyCode == KeyEvent.KeYcODE_ENTER && event.action == MotionEvent.ACTION_DOWN){
+			할일 작성
+			return@setOnKeyListener true
+			}
+		return@setOnKeyListent false
+		}
+
+
+
+
+
+
+
+
