@@ -67,3 +67,8 @@
 더 구현해볼 것
 
 1. 모르겠는게?
+
+![KakaoTalk_20220715_021703297_01](https://user-images.githubusercontent.com/68932465/179044191-c5be3410-1bbc-4b97-8cb2-e5790d97e09f.jpg)
+![KakaoTalk_20220715_021703297](https://user-images.githubusercontent.com/68932465/179044200-967709cd-5125-441a-987e-44329be41ae6.jpg)
+
+
