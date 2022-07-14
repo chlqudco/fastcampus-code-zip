@@ -1,4 +1,10 @@
-- 배운 내용
+- 소개
+	- 사용자의 키와 몸무게를 입력받아 BMI정도와 비만도를 계산해주는 앱
+	
+- 기능
+	- BMI 및 비만도 계산
+
+- 배우는 
 	- LinearLayout
 	- TextView, EditText, Button
 	- Intent
