@@ -1,3 +1,15 @@
+
+
+6. 뽀모도로 타이머
+   - CountDownTimer
+     - 말그대로 타이머, 초기값과 2개 메소드 오버라이드 해야함 
+   - SoundPool
+     - 오디오파일 재생 및 관리 클래스
+     - 짧은 파일에 적합
+   - SeekBar
+     - 손잡이로 조절하는 바 ?
+     - setOnSeekBarChangeListener로 리스너를 달 수 있고, 3개의 메소드 오버라이드 해야함
+
 개발 순서
 
 1. 메인 xml 꾸미기
