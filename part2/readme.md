@@ -1,9 +1,4 @@
-1. BMI 계산기
-   - LinearLayout
-   - Intent
-   - when 분기문
-   - 람다 함수
-   - Toast 메세지
+
 
 2. 로또 번호 추첨기
    - ConstraintLayout
