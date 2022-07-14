@@ -52,3 +52,5 @@
 
 
 2. 구현할 것
+
+![KakaoTalk_20220715_023043875_01](https://user-images.githubusercontent.com/68932465/179046369-7a171955-ddcf-491d-aa81-350196517cab.jpg)
