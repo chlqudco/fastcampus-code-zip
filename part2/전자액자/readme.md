@@ -1,3 +1,23 @@
+
+
+5. 전자 액자
+   - Runtime Permission
+     - 민감한? 정보나 기능을 다룰 때는 사용자의 권한을 받아와야 함 
+     - 거절한 유저를 위해 교육용 뷰를 보여줘야 함
+     - ContextCompat.checkSelfPermission(context, 권한)==PackageManager.PERMISSION_GRANTED으로 권한 있는지 체크
+     - shouldShowRequestPermissionRational 함수로 교육용 팝업 띄워야 하는지 확인
+     - 실제 권한 요청 : requestPermissions(권한 배열, 요청코드)
+     - onRequestPermissionResult 함수를 오버라이드 하여 결과 처리
+   - View Animation
+     - 뷰.animate().속성().setDuration(초).start()
+   - Content Provider
+     - 이 앱에선 SAF를 이용 
+     - intent.ACTIOC_GET_CONTENT 
+   - LifeCycle 
+     - 액티비티의 생명주기를 잘 알고 있어야 함
+   - Timer
+     - 일정 시간 마다 람다식 안의 내용 실행   
+
 배우는것
 
 1. 권한
