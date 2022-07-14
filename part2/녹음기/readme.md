@@ -1,3 +1,24 @@
+
+7. 녹음기
+   - MediaRecorder
+      - state diagram에 따라 잘 작업?해줘야 함
+      - format 과 encoder 설정은 안드로이드 doc에 자세히 나와있음
+      - MediaRecorder 선언 후 녹음을 시작할 때마다 초기화 해줘야 함
+      - 녹음 특성상 외부저장소에 저장하는 것이 유리함
+      - 이번 프로젝트에서는 externalCacheDirectory에 임시 저장
+      
+   - MediaPlayer
+      - 녹음한걸 재생하려면 플레이어를 써야함  
+      - 마찬가지로 적절한 state관리를 해줘야 함 
+      
+   - CustomView
+      - 이미지버튼을 클래스로 만들기 위해 AppCompatImageButton상속 받아야 함
+      - context와 attributeset을 인자로 받아야 함
+
+   - getter setter
+      - 사실 setter만 배움, 변수 아래 set(value) { } 를 하면 괄호 안의 내용이 실행
+      - field = value 를 통해 값 이식하는거 잊지 말길
+
 0. 배우는 것
 	-커스텀뷰, 미디어레코더
 1. 순서
