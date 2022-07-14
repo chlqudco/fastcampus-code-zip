@@ -65,5 +65,5 @@ startActivity(intent)
 ---
 
 - 동작 화면
-![KakaoTalk_20220714_150839705_01](https://user-images.githubusercontent.com/68932465/178912213-dbceef3f-6fbb-46a9-960d-7fb171d8654a.jpg)
-![KakaoTalk_20220714_150839705](https://user-images.githubusercontent.com/68932465/178912222-da86aef8-ef71-4684-a74b-a49fe193d41f.jpg)
+- ![KakaoTalk_20220714_150839705](https://user-images.githubusercontent.com/68932465/178946326-e9512694-db4f-4139-be63-62338d368971.jpg)
+![KakaoTalk_20220714_150839705_01](https://user-images.githubusercontent.com/68932465/178946334-c3c1ff44-20f6-47ac-8f88-a1b0df8708d6.jpg)
