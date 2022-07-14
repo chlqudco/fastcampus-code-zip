@@ -1,10 +1,5 @@
 
 
-2. 로또 번호 추첨기
-   - ConstraintLayout
-   - NumberPicker
-   - Shape Drawable
-   - apply , Set, List, Random
 
 3. 비밀 다이어리
    - SharedPreference , android-ktx
