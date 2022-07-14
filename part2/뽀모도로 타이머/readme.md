@@ -67,3 +67,6 @@
 
 
 더 구현 할 거
+
+![KakaoTalk_20220715_023043875](https://user-images.githubusercontent.com/68932465/179046367-47212e5a-0545-4a14-9052-dcbee7119845.jpg)
+
