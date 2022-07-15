@@ -70,18 +70,5 @@
 - 동작 화면
 
 
-
-6. 뽀모도로 타이머
-  
-     - 말그대로 타이머, 초기값과 2개 메소드 오버라이드 해야함 
-   
-     - 오디오파일 재생 및 관리 클래스
-     - 짧은 파일에 적합
-   
-     - 손잡이로 조절하는 바 ?
-     - setOnSeekBarChangeListener로 리스너를 달 수 있고, 3개의 메소드 오버라이드 해야함
-
-
-
-![KakaoTalk_20220715_023043875](https://user-images.githubusercontent.com/68932465/179046367-47212e5a-0545-4a14-9052-dcbee7119845.jpg)
+- ![KakaoTalk_20220715_023043875](https://user-images.githubusercontent.com/68932465/179046367-47212e5a-0545-4a14-9052-dcbee7119845.jpg)
 
