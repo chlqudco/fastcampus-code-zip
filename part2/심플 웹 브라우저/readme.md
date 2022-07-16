@@ -1,112 +1,73 @@
-
-
-
-
-
-8. 심플 웹 브라우저
-
-   - Web View
-      - 인터넷 권한 필수
-      - http 쓰려면 보안 문제 때문에 usesCleartextTraffic true로 줘야 함
-      - webview.webViewClient = WebViewClient() 줘야 외부 웹브라우저로 이동 안함 
-      - webview.settings.자바스크립트허용 = true로 줘야 js도 됨
-      - 주소창으로 쓰는 edittext의 imeOptions값을 적절히 주면 다양한 동작 가능
-        - actionDone을 주면 키보드가 내려감
-        - kt에서 edittext의 OnEditor액션리스너를 통해 actionDone인지 확인하면 바로 웹페이지 로딩 가능
-        - 키보드 처리등을 위해 false를 반환해줘야 함
-      - 
-
-
-   - Content Loading Progress bar
-     - 사용자한테 시각적으로 Feedback을 주는것은 매우 중요함, 가만히 있으면 안좋음 
-     - 끝나는 시점을 알고 있으므로 style에 Progressbar.Horizontal 지정, 자세한건 Determined progressbar 검색
-     - Web크롬클라이언트의 onProgressChanged 함수를 통해 progress 값 관리 가능
-     - Web뷰클라이언트의 메소드 오버라이드를 토애 보여주고 사라지기 구현
-     
-     
-   - Swiperefreshlayout
-     - 당겨서 새로고침
-     - 의존성 추가 해줘야 함 
-     - kt에 연결해서 이벤트 핸들링을 해주기, setonRefresh리스너 등록
-     - 로딩창? 을 없애려면 isrefreshing에 flase를 주기
-
-
-
-1. 배우는거
-	-웹 뷰, 새로고침
-
-2. 순서
+- 소개
+	- 웹뷰를 이용한 간단한 인터넷 브라우저 앱입니다
 	
-1. xml 구성
-	-주소창 영역은 컨스트, 높이는 액션바사이즈
-	-벡터 에셋으로 3개 버튼 가져오기
-	-버튼 3개, 에디트텍스트 배치
-	-아래에 웹뷰 추가
+- 기능
+	- 인터넷 브라우저 기능
+	- 뒤로가기, 앞으로 가기, 홈으로 가기
 
-2. kt 작업 시작
-	-인터넷 권한 매니페스트
-	-웹뷰 변수 선언
-	-뷰 초기화
-	-매니페스트에서 클리어텍스트 트루
-	-웹뷰 클라 교체
-	-자바스크립트 허락
-	-에디트 텍스트 ime옵션 액숀돈
-	-에디텍스트 변수 선언, 바인드뷰스
-	-셋온액션리스너, 아이디확인 후 로드주소, 리턴 펄스
+- 배우는 것
 
-4. 위 바 영역 조작
-	-모든 버튼들 변수 선언
-	-리스너 달기
-	-고백은 고백
-	-포워드는 고포워드
-	-홈은 구글 로드
+	- Web View
+	- Content Loading Progress bar
+	- Swiperefreshlayout
 
-5. 온 백 프레스트 재정의
-	-뒤로 갈수 있으면 웹 뒤로가기
+---
 
-6. xml 보완하기
-	-버튼에 리플 이펙트 주기
-		-백그라운드 어쩌구저쩌구
-	-Ratio주기, 그전에 w랑 h는 0dp
+- Web View
+	- 인터넷 권한 필수
+	- http 쓰려면 보안 문제 때문에 usesCleartextTraffic true로 줘야 함
+	- webview.webViewClient = WebViewClient() 줘야 외부 웹브라우저로 이동 안함 
+	- webview.settings.자바스크립트허용 = true로 줘야 js도 됨
+	- 주소창으로 쓰는 edittext의 imeOptions값을 적절히 주면 다양한 동작 가능
+		- actionDone을 주면 키보드가 내려감
+		- kt에서 edittext의 OnEditor액션리스너를 통해 actionDone인지 확인하면 바로 웹페이지 로딩 가능
+		- 키보드 처리등을 위해 false를 반환해줘야 함
+	- 뒤로 가기 : goBack
+		- onBackPress와 연동하면 높은 UX를 얻을 수 있다
+		- canGoBack으로 뒤로 갈 수 있는지 확인
+	- 앞으로 가기 : goForward
+	- webViewClient와 webChromeClient의 차이를 잘 알자
+	- onPageFibished 함수에는 진짜 주소가 인자로 전달됨
+	- 자동으로 http 추가해 주는 기능 만들기
+		- URLUTil.isNetworkUrl 로 있는지 확인 후, 없으면 추가해서 load하기
 
-7. 주소 입력창 드로어블
-	-회색 색상 지정
-	-렉탱글 셰이프, 색깔주고, 코너 주기
-	-패딩 주기
-
-8. 위 뷰에 그림자 주기
-	- 엘레베이션값
-
-9. 당겨서 새로고침 기능 구현
-	-의존성 추가
-	-웹뷰를 스와이프어쩌구 레이아웃으로 감싸기
-	-kt에서 이벤트 핸들링하기
-	-리프레시.셋온리프레시리스너
-	-웹뷰 리로드 하기
-	-리로드 다 되면
-
-10. 웹뷰클라이언트 재정의
-	-온페이지피니시드면 리프레싱 값 펄스
-
-11. 로딩 프로그래스바 구현
-	-콘텐츠 로딩 프로그래스바를 이용
-	-xml에 프로그래스바 넣기, 스타일값 주기
-	-kt에서 변수화 
-	-웹 크롬 클라이언트를 재 정의
-	-온프로그래스체인지드에서 프로그래스 값 프로그래스바에 대입
-	-웹뷰 클라에서 온페이지스타트 일때 보여주고 피니시 일때 숨기기
-
-12. 버튼들 조작
-	-페이지 피니시드에서 캔고백이면 버튼 누르기 가능하게
-	-포워드도 마찬가지
-
-13. 페이지 피니시드에서 현재 주소를 에디드텍스트에 넣기
-	-에디트 텍스트에 셀렉트포커싱 주기
-
-14. 상태창 색깔 바꾸기
-	-라이트 스태이터스바 트루로
-
-14. http로 시작 안하면 http넣어주기
+- Content Loading Progress bar
+	- 사용자한테 시각적으로 Feedback을 주는것은 매우 중요함, 가만히 있으면 안좋음 
+	- 끝나는 시점을 알고 있으므로 style에 Progressbar.Horizontal 지정, 자세한건 Determined progressbar 검색
+	- Web크롬클라이언트의 onProgressChanged 함수를 통해 progress 값 관리 가능
+	- Web뷰클라이언트의 메소드 오버라이드를 통해 보여주고 사라지기 구현
 
 
-![KakaoTalk_20220715_023043875_02](https://user-images.githubusercontent.com/68932465/179046374-8768ab5b-f1fb-4794-8e81-2b68daf7ad0e.jpg)
+- Swiperefreshlayout
+	- 당겨서 새로고침할 수 있게 해줌
+	- 의존성 추가 해줘야 함 
+	- kt에 연결해서 이벤트 핸들링을 해주기, setonRefresh리스너 등록
+	- 로딩창? 을 없애려면 isrefreshing에 flase를 주기
+		- webView랑 연동하기 위해 따로 클래스를 만들기 까지 함
+		- webView의 onPageFinished 함수를 오버라이드 하기 위해
+
+---
+
+- 더 구현해보고 싶은 것
+
+
+---
+
+- Tip
+
+	- 액션바 사이즈로 레이아웃 크기 지정
+		- height = ?attr/actionBarSize
+	
+	- 버튼의 background 속성으로 ?attr.selectableItemBackground 속성을 주면 리플 이펙트란게 생김
+		- 근데 왜 배경이 투명해지는겨?
+	
+	- EditText의 전체 선택 자동으로 해주는 속성
+		- selectAllOnFocus에 true 주기
+	
+	- statusBar windowLightStatusBar 속성 지정하면 검정?컴포넌트로 보임
+
+---
+
+- 동작 화면
+
+- ![KakaoTalk_20220715_023043875_02](https://user-images.githubusercontent.com/68932465/179046374-8768ab5b-f1fb-4794-8e81-2b68daf7ad0e.jpg)
