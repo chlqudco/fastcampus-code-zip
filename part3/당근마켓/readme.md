@@ -107,7 +107,7 @@
 
 - 동작 화면
 
-- ![KakaoTalk_20220720_204241495](https://user-images.githubusercontent.com/68932465/179974259-056b417e-b242-46d4-a7f1-c1da6ad33e7c.jpg)
-   ![KakaoTalk_20220720_204241495_01](https://user-images.githubusercontent.com/68932465/179974267-a44d17b9-ce76-4f64-9c54-9c6d4ea44def.jpg)
-   ![KakaoTalk_20220720_204241495_02](https://user-images.githubusercontent.com/68932465/179974272-9242cfaa-ceda-40bf-be50-ef24e06dd3c4.jpg)
+-   ![KakaoTalk_20220720_204241495_02](https://user-images.githubusercontent.com/68932465/179974272-9242cfaa-ceda-40bf-be50-ef24e06dd3c4.jpg)
    ![KakaoTalk_20220720_204241495_03](https://user-images.githubusercontent.com/68932465/179974273-93eebcc3-1b01-4300-a14c-1f1dc250bc11.jpg)
+   ![KakaoTalk_20220720_204241495_01](https://user-images.githubusercontent.com/68932465/179974267-a44d17b9-ce76-4f64-9c54-9c6d4ea44def.jpg)
+ ![KakaoTalk_20220720_204241495](https://user-images.githubusercontent.com/68932465/179974259-056b417e-b242-46d4-a7f1-c1da6ad33e7c.jpg)
