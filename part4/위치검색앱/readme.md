@@ -44,6 +44,7 @@
 
 - 동작 화면
 
-- ![KakaoTalk_20220721_175447331_29](https://user-images.githubusercontent.com/68932465/180379562-5987bbc5-06f1-4cbc-8214-f962ed2993d5.jpg)
-  ![KakaoTalk_20220721_175447331_28](https://user-images.githubusercontent.com/68932465/180379568-98db8921-ad18-48e9-8e87-28125eb0f447.jpg)
-  ![KakaoTalk_20220721_175447331_27](https://user-images.githubusercontent.com/68932465/180379574-5edf2866-a8e9-47db-97a0-afcbccebf7f4.jpg)
+- ![KakaoTalk_20220721_175447331_29](https://user-images.githubusercontent.com/68932465/180379853-aa2cb4f4-7eb1-497a-bc56-1227815318ac.jpg)
+  ![KakaoTalk_20220721_175447331_28](https://user-images.githubusercontent.com/68932465/180379862-23b1a4a2-33c8-47ec-ac92-b253131f3eaf.jpg)
+  ![KakaoTalk_20220721_175447331_27](https://user-images.githubusercontent.com/68932465/180379864-7f4722e1-cd72-4cd3-a98d-8aa4fdc95227.jpg)
+
